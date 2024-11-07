@@ -1,2 +1,2 @@
 # Leaderboard
-[coming soon🫠](https://avantikasingh2110.github.io/Leaderboard/)
+[Click to check the leaderboard](https://avantikasingh2110.github.io/Leaderboard/)
