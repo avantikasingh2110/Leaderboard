@@ -2,65 +2,88 @@ let players_container = document.getElementById("players_container");
 let score_btn = document.getElementById("score_btn");
 let firstName = document.querySelector(".fname");
 let lastName = document.querySelector(".lname");
-let country = document.querySelectorAll(".country");
+let country = document.querySelector(".country");
 let score = document.querySelector(".score");
+let playersArray = []; // Array to store players
 
-score_btn.addEventListener("click", function(e){
+score_btn.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if(firstName.value === "" || lastName.value === "" || country.value === "" || score.value === ""){
-        alert("Please fill all the information.")
-    }
-    else if(firstName.value !== "" && lastName.value !== "" && country.value !== "" && score.value !== ""){
-        let newDiv = document.createElement("div");
-        newDiv.classList = ("newDiv");
-        players_container.appendChild(newDiv);
-
-        let name = document.createElement("p");
-        name.textContent = firstName.value + " " +  lastName.value;
-        newDiv.appendChild(name);
-
-        let countryName = document.createElement("p");
-        countryName.textContent = country.value;
-        newDiv.appendChild(countryName);
-
-        let playerScore = document.createElement("p");
-        let num = Number(score.value);
-        playerScore.textContent = num;
-        // console.log(typeof playerScore);
+    if (firstName.value === "" || lastName.value === "" || country.value === "" || score.value === "") {
+        alert("Please fill all the information.");
+    } else {
+        // Create player object
+        let player = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            country: country.value,
+            score: Number(score.value)
+        };
         
-        newDiv.appendChild(playerScore);
+        // Add player to array
+        playersArray.push(player);
 
-        let substract_btn = document.createElement("button");
-        substract_btn.innerText = "-5";
-        substract_btn.addEventListener("click", () => {
-            let newSub = Number(playerScore.textContent);
-            newSub -=5;
-            playerScore.textContent = newSub;
-            // console.log(typeof newSub);
-            
-        })
-        newDiv.appendChild(substract_btn);
+        // Sort and display players in descending order
+        sortAndDisplayPlayers();
 
-        let delete_btn = document.createElement("button");
-        delete_btn.innerText = "❌";
-        delete_btn.addEventListener("click", () => {
-            newDiv.remove();
-        })
-        newDiv.appendChild(delete_btn);
-
-        let add_btn = document.createElement("button");
-        add_btn.innerText = "+5";
-        add_btn.addEventListener("click", () => {
-            let newAdd = Number(playerScore.textContent);
-            newAdd +=5;
-            playerScore.textContent = newAdd;
-        })
-        newDiv.appendChild(add_btn);
-
+        // Clear input fields
         firstName.value = "";
         lastName.value = "";
         country.value = "";
         score.value = ""; 
     }
-})
+});
+
+function sortAndDisplayPlayers() {
+    // Sort playersArray by score in descending order
+    playersArray.sort((a, b) => b.score - a.score);
+
+    // Clear existing players in the container
+    players_container.innerHTML = "";
+
+    // Display all players in sorted order
+    playersArray.forEach(player => displayPlayer(player));
+}
+
+function displayPlayer(player) {
+    let newDiv = document.createElement("div");
+    newDiv.classList.add("newDiv");
+    players_container.appendChild(newDiv);
+
+    let name = document.createElement("p");
+    name.textContent = `${player.firstName} ${player.lastName}`;
+    newDiv.appendChild(name);
+
+    let countryName = document.createElement("p");
+    countryName.textContent = player.country;
+    newDiv.appendChild(countryName);
+
+    let playerScore = document.createElement("p");
+    playerScore.textContent = player.score;
+    newDiv.appendChild(playerScore);
+
+    let subtractBtn = document.createElement("button");
+    subtractBtn.innerText = "-5";
+    subtractBtn.addEventListener("click", () => {
+        player.score -= 5;
+        sortAndDisplayPlayers();
+    });
+    newDiv.appendChild(subtractBtn);
+
+    let deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "❌";
+    deleteBtn.addEventListener("click", () => {
+        playersArray = playersArray.filter(p => p !== player);
+        sortAndDisplayPlayers();
+    });
+    newDiv.appendChild(deleteBtn);
+
+    let addBtn = document.createElement("button");
+    addBtn.innerText = "+5";
+    addBtn.addEventListener("click", () => {
+        player.score += 5;
+        sortAndDisplayPlayers();
+    });
+    newDiv.appendChild(addBtn);
+}
+
