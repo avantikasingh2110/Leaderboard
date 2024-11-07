@@ -25,14 +25,20 @@ score_btn.addEventListener("click", function(e){
         newDiv.appendChild(countryName);
 
         let playerScore = document.createElement("p");
-        playerScore.textContent = score.value;
+        let num = Number(score.value);
+        playerScore.textContent = num;
+        // console.log(typeof playerScore);
+        
         newDiv.appendChild(playerScore);
 
         let substract_btn = document.createElement("button");
         substract_btn.innerText = "-5";
         substract_btn.addEventListener("click", () => {
-            playerScore.value -=5;
-            playerScore.textContent = playerScore.value;
+            let newSub = Number(playerScore.textContent);
+            newSub -=5;
+            playerScore.textContent = newSub;
+            // console.log(typeof newSub);
+            
         })
         newDiv.appendChild(substract_btn);
 
@@ -46,8 +52,9 @@ score_btn.addEventListener("click", function(e){
         let add_btn = document.createElement("button");
         add_btn.innerText = "+5";
         add_btn.addEventListener("click", () => {
-            playerScore.value +=5;
-            playerScore.textContent = playerScore.value;
+            let newAdd = Number(playerScore.textContent);
+            newAdd +=5;
+            playerScore.textContent = newAdd;
         })
         newDiv.appendChild(add_btn);
 
