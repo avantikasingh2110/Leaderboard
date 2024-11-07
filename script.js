@@ -11,7 +11,6 @@ score_btn.addEventListener("click", function(e){
     if(firstName.value === "" || lastName.value === "" || country.value === "" || score.value === ""){
         alert("Please fill all the information.")
     }
-
     else if(firstName.value !== "" && lastName.value !== "" && country.value !== "" && score.value !== ""){
         let newDiv = document.createElement("div");
         newDiv.classList = ("newDiv");
@@ -34,7 +33,6 @@ score_btn.addEventListener("click", function(e){
         substract_btn.addEventListener("click", () => {
             playerScore.value -=5;
             playerScore.textContent = playerScore.value;
-
         })
         newDiv.appendChild(substract_btn);
 
@@ -57,6 +55,5 @@ score_btn.addEventListener("click", function(e){
         lastName.value = "";
         country.value = "";
         score.value = ""; 
-
     }
 })
