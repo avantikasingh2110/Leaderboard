@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Audiowide&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400..700&family=Fuzzy+Bubbles:wght@400;700&family=Loved+by+the+King&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Prociono&family=Rubik+Wet+Paint&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>🏆LEADERBOARD🏆</h1>
+
+    <div id="whole_container">
+        <div id="form_container">
+            <form>
+                <input type="text" name="fName" class="fname" placeholder="First Name">
+
+                <input type="text" name="lName" class="lname" placeholder="Last Name">
+
+                <select name="country" class="country">
+                    <option value selected>Select Country</option>
+                    <option value="India">India</option>
+                    <option value="Australia">Australia</option>
+                    <option value="England">England</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option> 
+                    <option value="Germany">Germany</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Austria">Austria</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="China">China</option>
+                    <option value="Türkiye">Türkiye</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Russia">Russia</option>
+                    <option value="United States">United States</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Vietnam">Vietnam</option>
+                </select>
+
+                <input type="number" name="Score" class="score" placeholder="Score">
+
+                <button id="score_btn">Add Score</button>
+            </form>
+
+            <div id="players_container">
+                <!-- Content goes here -->
+                <!-- <h3 class="empty-msg">ADD PLAYERS TO SEE LEADERBOARD</h3> -->
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

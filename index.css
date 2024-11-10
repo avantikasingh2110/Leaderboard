@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(210, 194, 252);
+
+    h1{
+        text-align: center;
+        font-size: 3rem;font-family: "Bona Nova SC", serif;
+        font-weight: 1000;
+        color: rgb(106, 4, 97);
+    }
+}
+
+#whole_container {
+    /* width: 100%; */
+    /* height: 550px; */
+    max-height: 550px;
+    overflow-y: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    background-color: rgb(162, 137, 224);
+     box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    margin: 15px 50px;
+    padding: 10px;
+
+    form {
+        max-width: 100%;
+        padding: 10px;
+        margin: 15px;
+        /* border: 1px solid red; */
+        background-color: rgb(120, 74, 237);
+        box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+
+        input, select, button {
+            font-size: 1.5rem;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 5px 15px;
+            background-color: rgb(128, 31, 197);
+            color: white;
+        }
+
+    }
+}
+
+#players_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.newDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 8px;
+}
+
+.newDiv p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.newDiv button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.newDiv button:hover {
+    background-color: #0056b3;
+}
+
