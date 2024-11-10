@@ -6,13 +6,13 @@
 
 body {
     background-color: rgb(210, 194, 252);
+}
 
-    h1{
-        text-align: center;
-        font-size: 3rem;font-family: "Bona Nova SC", serif;
-        font-weight: 1000;
-        color: rgb(106, 4, 97);
-    }
+h1{
+    text-align: center;
+    font-size: 3rem;font-family: "Bona Nova SC", serif;
+    font-weight: 1000;
+    color: rgb(106, 4, 97);
 }
 
 #whole_container {
@@ -27,29 +27,28 @@ body {
     justify-content: center;
     margin: 15px 50px;
     padding: 10px;
+}
 
-    #form {
-        max-width: 100%;
-        padding: 10px;
-        margin: 15px;
-        /* border: 1px solid red; */
-        background-color: rgb(120, 74, 237);
-        box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+#form {
+    max-width: 100%;
+    padding: 10px;
+    margin: 15px;
+    /* border: 1px solid red; */
+    background-color: rgb(120, 74, 237);
+    box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
 
-        input, select, button {
-            font-size: 1.5rem;
-            margin: 10px;
-            border-radius: 5px;
-        }
+input, select, button {
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 5px;
+}
 
-        button {
-            font-size: 1rem;
-            padding: 5px 15px;
-            background-color: rgb(128, 31, 197);
-            color: white;
-        }
-
-    }
+button {
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: rgb(128, 31, 197);
+    color: white;
 }
 
 #players_container {

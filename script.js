@@ -8,6 +8,7 @@ let playersArray = []; // Array to store players
 
 score_btn.addEventListener("click", function(e) {
     e.preventDefault();
+    console.log("Button clicked");
 
     if (firstName.value === "" || lastName.value === "" || country.value === "" || score.value === "") {
         alert("Please fill all the information.");

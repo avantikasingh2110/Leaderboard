@@ -1,6 +1,6 @@
 # 🏆 Leaderboard Project 🏆
 
-[Click to check the leaderboard 🏆](https://avantikasingh2110.github.io/Leaderboard/)
+[Click to check the leaderboard 🏆](https://avantikasingh2110-leaderboard.netlify.app/)
 
 - A dynamic leaderboard application that allows users to add players, input their scores, and view the leaderboard in real-time. Players can be added with their first name, last name, country, and score. The leaderboard automatically updates, showing players sorted by score in descending order. Users can also increase or decrease player scores and remove players from the leaderboard.
 
